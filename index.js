@@ -95,7 +95,7 @@ function Tags(element,options) {
   });
 
   this.boot = function() {
-    var id = 'fabric-tags';
+    var id = 'tags';
     var exists = document.querySelector('#' + id);
     if(!exists) {
       var link = document.createElement('link');
@@ -130,7 +130,6 @@ function Tags(element,options) {
       return true;
     }
     if(this.options.tagUnique == true) {
-
       if(this.tags().includes(value)) {
         this.input.value = '';
         this.input.defaultValue = '';
@@ -177,11 +176,9 @@ function Tags(element,options) {
 
   this.update = function() {
     var tags = this.tags();
-    this.element.defaultValue = tags.join(",");
+    this.element.defaultValue = tags.join(self.separator);
   };
   this.boot();
 
 };
-window.Tags = Tags;
-// then inside anywhere that uses it we need to make sure it's loaded using window.addEventListener('DOMContentLoaded', (event) => {});
 export { Tags };
