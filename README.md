@@ -5,7 +5,7 @@ Lightweight tag system
 ## Usage
 
 
-```javascript
+```html
 <input type="text" class="tags" data-tag-separator="," />
 
 <script type="module">
@@ -24,9 +24,9 @@ Lightweight tag system
 {
   tagSeparator: ',',
   tagInputDisabled: false, // disables the input (good for using with suggestive)
-  tagCssPath :  '/style.css' // path to the css file which is auto appended to document head
+  tagCssPath :  '/style.css', // path to the css file which is auto appended to document head
   tagUnique: true, // whether duplicate tags are allowed
-  tagSort : false // whether to alphabetically sort the tags when adding one
+  tagSort : false, // whether to alphabetically sort the tags when adding one
   tagResizeInput : false // whether to resize the input initial width to the width of the placeholder
 }
 ```
