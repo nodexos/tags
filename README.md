@@ -5,7 +5,7 @@ Lightweight tag system
 ## Usage
 
 
-```
+```javascript
 <input type="text" class="tags" data-tag-separator="," />
 
 <script type="module">
@@ -20,7 +20,7 @@ Lightweight tag system
 
 ### Options
 
-```
+```javascript
 {
   tagSeparator: ',',
   tagInputDisabled: false, // disables the input (good for using with suggestive)
