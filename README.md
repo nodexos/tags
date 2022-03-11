@@ -35,3 +35,5 @@ All of the options can also be sent as data attributes on the main tag input suc
 Pressing the `enter` key or the tag separator key will finish the current tag selection and add it to the tag list (subject to uniqueness checks etc)
 
 Pressing `backspace` will delete the tag behind the current cursor as will clicking the delete cross on each tag
+
+![Screenshot](/screenshot.png?raw=true "Screenshot")
