@@ -9,11 +9,17 @@ Lightweight tag system
 <input type="text" class="tags" data-tag-separator="," />
 
 <script type="module">
+  
   import { Tags } from '/path/to/tags/index.js';
-
+  // Selector can be DOMNode or String
   var element = new Tags(document.querySelector('.tags'),{
-
-  }); // element or string which will be used as selector
+      tagSeparator: ',',
+      tagInputDisabled: false,
+      tagCssPath :  '/style.css',
+      tagUnique: true,
+      tagSort : false,
+      tagResizeInput : false 
+  });
 
 </script>
 ```
