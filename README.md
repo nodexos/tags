@@ -38,4 +38,4 @@ Pressing `backspace` will delete the tag behind the current cursor as will click
 
 ### Tags in action
 
-![Screenshot](/screenshot.png?raw=true "Screenshot")
+![Screenshot](/screenshot.png?raw=true&v=0.01 "Screenshot")
