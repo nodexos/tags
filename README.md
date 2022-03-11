@@ -36,4 +36,6 @@ Pressing the `enter` key or the tag separator key will finish the current tag se
 
 Pressing `backspace` will delete the tag behind the current cursor as will clicking the delete cross on each tag
 
+### Tags in action
+
 ![Screenshot](/screenshot.png?raw=true "Screenshot")
