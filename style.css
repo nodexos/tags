@@ -5,10 +5,11 @@
   --tag-wrapper-border-radius: .25rem;
   --tag-font-size: .85rem;
   --tag-font-weight: bold;
-  --tag-background: #63B3ED;
+  --tag-background: #2563EB;
   --tag-color: #fff;
   --tag-border-radius: .25rem;
   --tag-close-hover-color: #EF4444;
+  --tag-suggestive-box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
 }
 .tags-wrapper {
   display: grid;
@@ -19,7 +20,41 @@
   border-radius: var(--tag-wrapper-border-radius);
   padding: var(--tag-gap);
   padding-bottom: 0px;
+  position:relative;
 }
+.tags-suggestive {
+  list-style-type: none;
+  position:absolute;
+  z-index:1;
+  left:0;
+  top:100%;
+  width:100%;
+  border:var(--tag-wrapper-border);
+  margin-top:.25rem;
+  font-size: var(--tag-font-size);
+  background:#fff;
+  box-shadow:var(--tag-suggestive-box-shadow);
+  border-radius:var(--tag-wrapper-border-radius);
+  padding:.25rem;
+  flex-direction:column;
+  gap:.5rem;
+  display:none;
+}
+.tags-suggestive-visible {
+  display:flex;
+}
+.tags-suggestive li {
+  border-radius: var(--tag-border-radius);
+  padding-inline: .25rem;
+  display: block;
+  cursor: pointer;
+  
+}
+.tags-suggestive li:hover {
+  background: var(--tag-background);
+  color: var(--tag-color);
+}
+
 .tags-wrapper .tag {
   margin-bottom: var(--tag-gap);
   margin-right: var(--tag-gap);
@@ -35,6 +70,16 @@
   justify-content: space-between;
   align-items: center;
   line-height: normal;
+}
+.tags-wrapper .tag[draggable="true"] {
+  cursor:move;
+}
+.tag-dragover {
+  outline: 2px #666;
+  outline-style: dashed;
+}
+.tag-dragging {
+  opacity:.3;
 }
 .tags-wrapper .tag:last-of-type {
   margin-right: 0px;
